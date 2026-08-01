@@ -128,24 +128,26 @@ WalletFlow
 # 🔄 Jenkins Pipeline
 
 ```text
-GitHub
-   │
-   ▼
+GitHub Repository
+        │
+        ▼
+Jenkins Pipeline
+        │
+        ▼
 Clone Repository
-   │
-   ▼
+        │
+        ▼
 Build Docker Images
-   │
-   ▼
+        │
+        ▼
+Stop Existing Containers
+        │
+        ▼
 Docker Compose Up
-   │
-   ▼
-Deploy Containers
-   │
-   ▼
+        │
+        ▼
 Verify Deployment
-
----
+```
 
 # 🐳 Docker Services
 
@@ -190,9 +192,6 @@ The Jenkins pipeline automatically:
 ## Application
 
 <img width="1891" height="976" alt="Home Page" src="https://github.com/user-attachments/assets/511c6504-34b1-4f1f-93b4-a6edaa753a78" />
-
-
----
 
 ---
 
