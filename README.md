@@ -144,7 +144,6 @@ Deploy Containers
    │
    ▼
 Verify Deployment
-```
 
 ---
 
