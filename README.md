@@ -174,34 +174,6 @@ The Jenkins pipeline automatically:
 
 # 📷 Project Screenshots
 
-## Architecture
-
-                          👨‍💻 Developer
-                                │
-                          git push origin main
-                                │
-                                ▼
-                      GitHub Repository
-                                │
-                                ▼
-                     Jenkins CI/CD Pipeline
-         ┌──────────────────────┼──────────────────────┐
-         │                      │                      │
-         ▼                      ▼                      ▼
-   Clone Repository      Build Docker Images     Run Pipeline
-                                │
-                                ▼
-                       Docker Compose
-                                │
-          ┌─────────────────────┼─────────────────────┐
-          ▼                     ▼                     ▼
-     React Frontend      Spring Boot Backend      MySQL Database
-                                │
-                                ▼
-                      Application Running
-
----
-
 ## Jenkins Pipeline
 
 <img width="1915" height="242" alt="Jenkins-Pipeline" src="https://github.com/user-attachments/assets/600a9262-f37d-4ac3-ab09-db65fe9c5008" />
