@@ -68,11 +68,16 @@ function App() {
         type: 'EXPENSE',
         transactionDate: new Date().toISOString().split('T')[0]
       })
+    }).then(res => {
+      if (!res.ok) {
+        console.error("Failed to add transaction");
+      }
+      return res.json();
     }).then(() => {
       setShowExpenseModal(false);
       setExpenseForm({ amount: '', category: 'Food & Dining', description: '', paymentMethod: 'Cash' });
       fetchDashboard();
-    });
+    }).catch(err => console.error(err));
   };
 
   const handleGoalSubmit = (e) => {
@@ -125,21 +130,21 @@ function App() {
           <div className="stat-icon green">₹</div>
           <div>
             <div className="stat-label">Monthly Income</div>
-            <div className="stat-value">₹{data.monthlyIncome.toFixed(2)}</div>
+            <div className="stat-value">₹{Number(data.monthlyIncome).toFixed(2)}</div>
           </div>
         </div>
         <div className="stat-card">
           <div className="stat-icon red">₹</div>
           <div>
             <div className="stat-label">Monthly Expenses</div>
-            <div className="stat-value">₹{data.monthlyExpenses.toFixed(2)}</div>
+            <div className="stat-value">₹{Number(data.monthlyExpenses).toFixed(2)}</div>
           </div>
         </div>
         <div className="stat-card">
           <div className="stat-icon yellow">₹</div>
           <div>
             <div className="stat-label">Net Balance</div>
-            <div className="stat-value">₹{data.netBalance.toFixed(2)}</div>
+            <div className="stat-value">₹{Number(data.netBalance).toFixed(2)}</div>
           </div>
         </div>
         <div className="stat-card health-score">
@@ -173,7 +178,7 @@ function App() {
                     </div>
                   </div>
                   <div className="tx-amount">
-                    <h4>-₹{tx.amount.toFixed(2)}</h4>
+                    <h4>-₹{Number(tx.amount).toFixed(2)}</h4>
                     <p>{tx.paymentMethod}</p>
                   </div>
                 </div>
@@ -246,7 +251,7 @@ function App() {
                   </div>
                 </div>
                 <div className="tx-amount">
-                  <h4>-₹{tx.amount.toFixed(2)}</h4>
+                  <h4>-₹{Number(tx.amount).toFixed(2)}</h4>
                   <p>{tx.paymentMethod}</p>
                 </div>
               </div>

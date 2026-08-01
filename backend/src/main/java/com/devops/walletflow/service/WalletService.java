@@ -29,7 +29,7 @@ public class WalletService {
             User user = new User();
             user.setName("WalletFlow User");
             user.setEmail("user@walletflow.com");
-            user.setMonthlyIncome(new BigDecimal("50000.00")); // default
+            user.setMonthlyIncome(new BigDecimal("0.00")); // default
             return userRepository.save(user);
         });
     }

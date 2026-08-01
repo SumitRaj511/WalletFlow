@@ -21,6 +21,7 @@ public class Transaction {
     
     private String paymentMethod; // Cash, Credit Card
     
+    @com.fasterxml.jackson.annotation.JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate transactionDate;
     
     private String type; // INCOME or EXPENSE

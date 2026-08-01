@@ -17,6 +17,7 @@ public class Bill {
     
     private BigDecimal amount;
     
+    @com.fasterxml.jackson.annotation.JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate dueDate;
     
     private boolean isPaid = false;
