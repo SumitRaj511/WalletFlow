@@ -176,43 +176,52 @@ The Jenkins pipeline automatically:
 
 ## Architecture
 
-> Add Architecture Diagram
-
----
-
-## Jenkins Dashboard
-
-> Add Screenshot
+                          👨‍💻 Developer
+                                │
+                          git push origin main
+                                │
+                                ▼
+                      GitHub Repository
+                                │
+                                ▼
+                     Jenkins CI/CD Pipeline
+         ┌──────────────────────┼──────────────────────┐
+         │                      │                      │
+         ▼                      ▼                      ▼
+   Clone Repository      Build Docker Images     Run Pipeline
+                                │
+                                ▼
+                       Docker Compose
+                                │
+          ┌─────────────────────┼─────────────────────┐
+          ▼                     ▼                     ▼
+     React Frontend      Spring Boot Backend      MySQL Database
+                                │
+                                ▼
+                      Application Running
 
 ---
 
 ## Jenkins Pipeline
 
-> Add Screenshot
+<img width="1915" height="242" alt="Jenkins-Pipeline" src="https://github.com/user-attachments/assets/600a9262-f37d-4ac3-ab09-db65fe9c5008" />
 
----
-
-## Successful Console Output
-
-> Add Screenshot
 
 ---
 
 ## Docker Containers
 
-> Add Screenshot of `docker ps`
+<img width="1587" height="357" alt="Docker Dekstop" src="https://github.com/user-attachments/assets/5c2ce8b6-322c-424c-94e7-1401ae2cfea5" />
+
 
 ---
 
 ## Application
 
-> Add Frontend Screenshot
+<img width="1891" height="976" alt="Home Page" src="https://github.com/user-attachments/assets/511c6504-34b1-4f1f-93b4-a6edaa753a78" />
+
 
 ---
-
-## GitHub Repository
-
-> Add Repository Screenshot
 
 ---
 
