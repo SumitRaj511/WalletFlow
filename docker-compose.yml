@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: walletflow-db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: walletflow
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - walletflow-network
+
+  backend:
+    build: ./backend
+    container_name: walletflow-backend
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_NAME=walletflow
+      - DB_USER=root
+      - DB_PASSWORD=password
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    networks:
+      - walletflow-network
+
+  frontend:
+    build: ./frontend
+    container_name: walletflow-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - walletflow-network
+
+volumes:
+  db_data:
+
+networks:
+  walletflow-network:
+    driver: bridge
