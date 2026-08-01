@@ -147,7 +147,9 @@ Docker Compose Up
         │
         ▼
 Verify Deployment
+
 ```
+
 
 # 🐳 Docker Services
 
