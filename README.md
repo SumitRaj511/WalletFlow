@@ -11,8 +11,6 @@
 [![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker)](https://www.docker.com/)
 [![Docker Compose](https://img.shields.io/badge/Docker_Compose-Orchestration-2496ED?style=for-the-badge&logo=docker)](https://docs.docker.com/compose/)
 [![Jenkins](https://img.shields.io/badge/Jenkins-CI/CD-D24939?style=for-the-badge&logo=jenkins)](https://www.jenkins.io/)
-[![Terraform](https://img.shields.io/badge/Terraform-IaC-7B42BC?style=for-the-badge&logo=terraform)](https://www.terraform.io/)
-[![AWS](https://img.shields.io/badge/AWS-Cloud-FF9900?style=for-the-badge&logo=amazonaws)](https://aws.amazon.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-Version_Control-181717?style=for-the-badge&logo=github)](https://github.com/)
 
 </div>
@@ -159,14 +157,6 @@ The application runs as three Docker containers.
 | Frontend | React Application |
 | Backend | Spring Boot REST API |
 | Database | MySQL 8 |
-
----
-
-# ☁ Infrastructure
-
-Infrastructure provisioning is managed using **Terraform**.
-
-Terraform configuration is included to provision AWS resources required for deployment.
 
 ---
 
